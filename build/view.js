@@ -79,10 +79,6 @@ function calculate_dough(context) {
   let bakersBase = calculations.hydrationOf / 95 + 1;
   ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase);
   ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase / 100 * calculations.hydrationOf);
-  ingredients.oil = Math.ceil(ingredients.water / 100 * 2);
-  ingredients.water = ingredients.water - ingredients.oil;
-  ingredients.salt = Math.ceil(Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase) / 100 * 3);
-  ingredients.yeast = Math.ceil(calculations.weightOf * calculations.numberOf / 100 * 0.115);
 }
 (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block/pizza-dough-calculator', {
   actions: {
