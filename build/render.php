@@ -27,11 +27,11 @@
 	<div class="panel">
 		<p>Dough Prep Information</p>
 		<div class="form-group">
-			<input type="number" placeholder="No. of Pizza" data-wp-on--keyup="actions.pizzas">
+			<input data-wp-on--keyup="actions.pizzas">
 		</div>
 
 		<div class="form-group">
-			<input type="number" placeholder="Weight of doughball (g)" data-wp-on--keyup="actions.weight">
+			<input data-wp-on--keyup="actions.weight">
 		</div>
 	</div>
 
