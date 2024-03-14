@@ -21,10 +21,7 @@
 		},
 		"ingredients": {
 			"flour":0,
-			"water":0,
-			"oil":0,
-			"salt":0,
-			"yeast":0
+			"water":0
 		}
 	}'
 >
@@ -57,23 +54,6 @@
 			</div>
 		</div>
 
-		<div class="normal-group">
-			<div class="ingredients">Oil :
-				<span data-wp-text="context.ingredients.oil"></span>
-			</div>
-		</div>
-
-		<div class="normal-group">
-			<div class="ingredients">Salt : 
-				<span data-wp-text="context.ingredients.salt"></span>
-			</div>
-		</div>
-
-		<div class="normal-group">
-			<div class="ingredients">Yeast : 
-				<span data-wp-text="context.ingredients.yeast"></span>
-			</div>
-		</div>
 	</div>
 			
 </div>
