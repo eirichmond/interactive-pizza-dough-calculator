@@ -66,28 +66,17 @@ __webpack_require__.r(__webpack_exports__);
  * WordPress dependencies
  */
 
-
-// the bakers equation
-function calculate_dough(context) {
-  // use object destructuring to extract specific properties
-  const {
-    calculations,
-    ingredients
-  } = context;
-  ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf);
-  ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf);
-}
 (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block/pizza-dough-calculator', {
   actions: {
     pizzas: event => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.calculations.numberOf = event.target.value;
-      calculate_dough(context);
+      console.log(context.calculations.numberOf);
     },
     weight: event => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.calculations.weightOf = event.target.value;
-      calculate_dough(context);
+      console.log(context.calculations.weightOf);
     }
   }
 });
