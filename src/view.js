@@ -30,56 +30,37 @@ function calculate_dough(context) {
 	// conditionally changing variables so use let
 	let bakersBase = calculations.hydrationOf / 95 + 1;
 
-	
+
 	ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase);
 	
 	const flour = convertToMetricIfNeeded(ingredients.flour, 1000, 'unitFlourKg');
 	context.unitFlourKg = flour.unit;
 	ingredients.flour = flour.value;
 
-	// if ( ingredients.flour > 1000 ) {
-	// 	ingredients.flour = ( ingredients.flour / 1000 ).toFixed(3);
-	// 	context.unitFlourKg = 'kg';
-	// } else {
-	// 	context.unitFlourKg = 'g';
-	// }
-
 	ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase / 100 * calculations.hydrationOf);
 	ingredients.oil = Math.ceil(ingredients.water / 100 * 2);
 
-	if ( ingredients.oil > 1000 ) {
-		ingredients.oil = ( ingredients.oil / 1000 ).toFixed(3);
-		context.unitOilL = 'L';
-	} else {
-		context.unitOilL = 'ml';
-	}
+	const oil = convertToMetricIfNeeded(ingredients.oil, 1000, 'unitOilL');
+	context.unitOilL = oil.unit;
+	ingredients.oil = oil.value;
 
 	ingredients.water = ingredients.water - ingredients.oil;
 
-	if ( ingredients.water > 1000 ) {
-		ingredients.water = ( ingredients.water / 1000 ).toFixed(3);
-		context.unitWaterL = 'L';
-	} else {
-		context.unitWaterL = 'ml';
-	}
+	const water = convertToMetricIfNeeded(ingredients.water, 1000, 'unitWaterL');
+	context.unitWaterL = water.unit;
+	ingredients.water = water.value;
 
 	ingredients.salt = Math.ceil(Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase) / 100 * 3);
 
-	if ( ingredients.salt > 1000 ) {
-		ingredients.salt = ( ingredients.salt / 1000 ).toFixed(3);
-		context.unitSaltKg = 'kg';
-	} else {
-		context.unitSaltKg = 'g';
-	}
+	const salt = convertToMetricIfNeeded(ingredients.salt, 1000, 'unitSaltKg');
+	context.unitSaltKg = salt.unit;
+	ingredients.salt = salt.value;
 
 	ingredients.yeast = Math.ceil(calculations.weightOf * calculations.numberOf / 100 * 0.115);
 
-	if ( ingredients.yeast > 1000 ) {
-		ingredients.yeast = ( ingredients.yeast / 1000 ).toFixed(3);
-		context.unitYeastKg = 'kg';
-	} else {
-		context.unitYeastKg = 'g';
-	}
+	const yeast = convertToMetricIfNeeded(ingredients.yeast, 1000, 'unitYeastKg');
+	context.unitYeastKg = yeast.unit;
+	ingredients.yeast = yeast.value;
 
 }
 
