@@ -71,12 +71,12 @@ __webpack_require__.r(__webpack_exports__);
     pizzas: event => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.calculations.numberOf = event.target.value;
-      console.log(context.calculations.numberOf);
+      console.log(context);
     },
     weight: event => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.calculations.weightOf = event.target.value;
-      console.log(context.calculations.weightOf);
+      console.log(context);
     }
   }
 });

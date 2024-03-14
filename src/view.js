@@ -8,12 +8,12 @@ store( 'create-block/pizza-dough-calculator', {
 		pizzas: ( event ) => {
 			const context = getContext();
 			context.calculations.numberOf = event.target.value;
-			console.log(context.calculations.numberOf)
+			console.log(context)
 		},
 		weight: ( event ) => {
 			const context = getContext();
 			context.calculations.weightOf = event.target.value;
-			console.log(context.calculations.weightOf);
+			console.log(context);
 		}
 	}
 } );
