@@ -16,8 +16,7 @@
 	data-wp-context='{
 		"calculations": {
 			"numberOf":0,
-			"weightOf":0,
-			"hydrationOf":0 
+			"weightOf":0
 		},
 		"ingredients": {
 			"flour":0,
@@ -33,10 +32,6 @@
 
 		<div class="form-group">
 			<input type="number" placeholder="Weight of doughball (g)" data-wp-on--keyup="actions.weight">
-		</div>
-
-		<div class="form-group">
-			<input type="number" name="hydration" placeholder="Hydration (%)" data-wp-on--keyup="actions.hydration">
 		</div>
 	</div>
 

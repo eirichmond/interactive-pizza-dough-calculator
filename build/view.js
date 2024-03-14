@@ -74,11 +74,8 @@ function calculate_dough(context) {
     calculations,
     ingredients
   } = context;
-
-  // conditionally changing variables so use let
-  let bakersBase = calculations.hydrationOf / 95 + 1;
-  ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase);
-  ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase / 100 * calculations.hydrationOf);
+  ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf);
+  ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf);
 }
 (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.store)('create-block/pizza-dough-calculator', {
   actions: {
@@ -90,11 +87,6 @@ function calculate_dough(context) {
     weight: event => {
       const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
       context.calculations.weightOf = event.target.value;
-      calculate_dough(context);
-    },
-    hydration: event => {
-      const context = (0,_wordpress_interactivity__WEBPACK_IMPORTED_MODULE_0__.getContext)();
-      context.calculations.hydrationOf = event.target.value;
       calculate_dough(context);
     }
   }

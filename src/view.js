@@ -9,11 +9,8 @@ function calculate_dough(context) {
 	// use object destructuring to extract specific properties
 	const { calculations, ingredients } = context;
 
-	// conditionally changing variables so use let
-	let bakersBase = calculations.hydrationOf / 95 + 1;
-
-	ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase);
-	ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf / bakersBase / 100 * calculations.hydrationOf);
+	ingredients.flour = Math.ceil(calculations.numberOf * calculations.weightOf);
+	ingredients.water = Math.ceil(calculations.numberOf * calculations.weightOf);
 
 }
 
@@ -28,12 +25,7 @@ store( 'create-block/pizza-dough-calculator', {
 			const context = getContext();
 			context.calculations.weightOf = event.target.value;
 			calculate_dough(context);
-		},
-		hydration: ( event ) => {
-			const context = getContext();
-			context.calculations.hydrationOf = event.target.value;
-			calculate_dough(context);
-		},
+		}
 	}
 } );
 
