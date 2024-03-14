@@ -67,21 +67,6 @@ __webpack_require__.r(__webpack_exports__);
  */
 
 
-// convert decimal and units if over a threshold
-function convertToMetricIfNeeded(ingredient, threshold, unitProperty) {
-  if (ingredient > threshold) {
-    return {
-      value: (ingredient / 1000).toFixed(3),
-      unit: 'kg'
-    };
-  } else {
-    return {
-      value: ingredient,
-      unit: 'g'
-    };
-  }
-}
-
 // the bakers equation
 function calculate_dough(context) {
   // use object destructuring to extract specific properties

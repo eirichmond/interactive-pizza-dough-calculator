@@ -20,7 +20,6 @@
 			"hydrationOf":0 
 		},
 		"ingredients": {
-			"unitFlourKg":"g",
 			"flour":0,
 			"water":0,
 			"oil":0,
