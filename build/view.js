@@ -81,6 +81,8 @@ function convertToMetricIfNeeded(ingredient, threshold, unitProperty) {
     };
   }
 }
+
+// the bakers equation
 function calculate_dough(context) {
   // conditionally changing variables so use let
   let {
