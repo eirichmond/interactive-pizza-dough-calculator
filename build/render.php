@@ -26,12 +26,7 @@
 			"oil":0,
 			"salt":0,
 			"yeast":0
-		},
-		"unitFlourKg":"g",
-		"unitWaterL":"ml",
-		"unitOilL":"ml",
-		"unitSaltKg":"g",
-		"unitYeastKg":"g"
+		}
 	}'
 >
 	<div class="panel">
@@ -54,35 +49,30 @@
 		<div class="normal-group">
 			<div class="ingredients">Flour :
 				<span data-wp-text="context.ingredients.flour"></span>
-				<span data-wp-text="context.unitFlourKg"></span>
 			</div>
 		</div>
 
 		<div class="normal-group">
 			<div class="ingredients">Water :
 				<span data-wp-text="context.ingredients.water"></span>
-				<span data-wp-text="context.unitWaterL"></span>
 			</div>
 		</div>
 
 		<div class="normal-group">
 			<div class="ingredients">Oil :
 				<span data-wp-text="context.ingredients.oil"></span>
-				<span data-wp-text="context.unitOilL"></span>
 			</div>
 		</div>
 
 		<div class="normal-group">
 			<div class="ingredients">Salt : 
 				<span data-wp-text="context.ingredients.salt"></span>
-				<span data-wp-text="context.unitSaltKg"></span>
 			</div>
 		</div>
 
 		<div class="normal-group">
 			<div class="ingredients">Yeast : 
 				<span data-wp-text="context.ingredients.yeast"></span>
-				<span data-wp-text="context.unitYeastKg"></span>
 			</div>
 		</div>
 	</div>
