@@ -8,7 +8,7 @@ store( 'create-block/pizza-dough-calculator', {
 		pizzas: ( event ) => {
 			const context = getContext();
 			context.calculations.numberOf = event.target.value;
-			console.log(context.calculations.numberOf)
+			console.log(context.calculations.numberOf);
 		},
 		weight: ( event ) => {
 			const context = getContext();
