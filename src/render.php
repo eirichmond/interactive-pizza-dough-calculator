@@ -36,7 +36,7 @@
 		</div>
 
 		<div class="form-group">
-			<input type="number" name="hydration" placeholder="Hydration (%)" data-wp-on--keyup="actions.hydration">
+			<input type="number" placeholder="Hydration (%)" data-wp-on--keyup="actions.hydration">
 		</div>
 	</div>
 
