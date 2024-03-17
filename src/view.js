@@ -4,16 +4,16 @@
 import { store, getContext } from '@wordpress/interactivity';
 
 // convert decimal and units if over a threshold
-function convertToMetricIfNeeded(ingredient, threshold) {
+function convertToMetricIfNeeded(ingredient, threshold, liquid) {
     if (ingredient > threshold) {
         return {
             value: (ingredient / 1000).toFixed(3),
-            unit: 'kg'
+            unit: liquid ?  'L' : 'kg'
         };
     } else {
         return {
             value: ingredient,
-            unit: 'g'
+            unit: liquid ? 'ml' : 'g'
         };
     }
 }
@@ -46,7 +46,7 @@ function calculate_dough(context) {
 
 	ingredients.water = ingredients.water - ingredients.oil;
 
-	const water = convertToMetricIfNeeded(ingredients.water, 1000);
+	const water = convertToMetricIfNeeded(ingredients.water, 1000, true);
 	context.unitWaterL = water.unit;
 	ingredients.water = water.value;
 
